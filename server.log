@@ -1,0 +1,5 @@
+[dotenv@17.2.0] injecting env (49) from .env (tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild)
+✅ MongoDB connected
+🚀 Server running on port 9000
+📍 Health check: http://localhost:9000/health
+🔗 API endpoint: http://localhost:9000/api

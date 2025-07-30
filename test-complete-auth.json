@@ -1,0 +1,5 @@
+{
+  "email": "testuser@example.com",
+  "password": "SecurePass123!",
+  "deviceToken": "fcm_token_test_device_12345"
+}

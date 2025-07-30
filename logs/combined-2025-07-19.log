@@ -1,0 +1,129 @@
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:15:50.964Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:15:50.966Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:16:09.077Z"}
+{"level":"warn","message":"Redis connection closed","timestamp":"2025-07-19T17:16:09.080Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:16:09.099Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:16:09.114Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:16:09.323Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:19:30.355Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:19:30.357Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:19:30.358Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:19:40.481Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:19:40.482Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:19:40.483Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:19:57.853Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:19:57.855Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:19:57.856Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:20:11.559Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:20:11.561Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:20:11.562Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:20:36.128Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:20:36.130Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:20:36.130Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:20:55.723Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:20:55.725Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:20:55.725Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:21:12.460Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:21:12.463Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:21:12.463Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:21:31.932Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:21:31.934Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:21:31.935Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:22:08.233Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:22:08.237Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:22:08.237Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:22:52.462Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:22:52.466Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:22:52.466Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:25:02.293Z"}
+{"level":"warn","message":"Redis connection closed","timestamp":"2025-07-19T17:25:02.297Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:25:05.819Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:25:05.820Z"}
+{"level":"info","message":"Redis client connected and ready","timestamp":"2025-07-19T17:25:05.821Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:30:25.662Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:30:25.664Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:30:38.255Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:30:38.259Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:31:05.854Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:31:05.858Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:31:31.809Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:31:31.811Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:36:34.670Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:36:34.672Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:36:52.891Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:36:52.897Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:37:08.369Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:37:08.370Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:37:19.974Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:37:19.976Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:37:31.721Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:37:31.723Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:37:47.148Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:37:47.150Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:38:05.395Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:38:05.396Z"}
+{"level":"warn","message":"Redis connection closed","timestamp":"2025-07-19T17:38:05.399Z"}
+{"level":"warn","message":"Redis connection ended","timestamp":"2025-07-19T17:38:05.399Z"}
+{"level":"warn","message":"Redis connection closed","timestamp":"2025-07-19T17:38:05.401Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:38:14.392Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:38:14.394Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:41:25.765Z"}
+{"level":"warn","message":"Redis connection closed","timestamp":"2025-07-19T17:41:25.767Z"}
+{"level":"warn","message":"Redis connection ended","timestamp":"2025-07-19T17:41:25.768Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:41:34.930Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:41:34.939Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:43:45.218Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:43:45.220Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:44:25.763Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:44:25.765Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:44:46.184Z"}
+{"level":"warn","message":"Redis connection closed","timestamp":"2025-07-19T17:44:46.188Z"}
+{"level":"warn","message":"Redis connection ended","timestamp":"2025-07-19T17:44:46.189Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:44:49.080Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:44:49.082Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:45:55.267Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:45:55.269Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T17:45:59.954Z"}
+{"level":"warn","message":"Redis connection closed","timestamp":"2025-07-19T17:45:59.957Z"}
+{"level":"warn","message":"Redis connection ended","timestamp":"2025-07-19T17:45:59.958Z"}
+{"level":"info","message":"Redis connection established","timestamp":"2025-07-19T17:46:02.613Z"}
+{"level":"info","message":"Redis client ready","timestamp":"2025-07-19T17:46:02.615Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T17:57:21.031Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T17:57:31.836Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T17:58:44.550Z"}
+{"level":"error","message":"Failed to connect to Redis: Redis is already connecting/connected","stack":"Error: Redis is already connecting/connected\n    at /home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:107:24\n    at new Promise (<anonymous>)\n    at EventEmitter.connect (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:103:25)\n    at ensureConnection (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:31:25)\n    at Object.<anonymous> (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:57:1)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","timestamp":"2025-07-19T18:01:33.173Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:01:33.175Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:01:33.177Z"}
+{"level":"error","message":"Failed to connect to Redis: Redis is already connecting/connected","stack":"Error: Redis is already connecting/connected\n    at /home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:107:24\n    at new Promise (<anonymous>)\n    at EventEmitter.connect (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:103:25)\n    at ensureConnection (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:31:25)\n    at Object.<anonymous> (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:57:1)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","timestamp":"2025-07-19T18:01:51.592Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:01:51.603Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:01:51.608Z"}
+{"level":"error","message":"Failed to connect to Redis: Redis is already connecting/connected","stack":"Error: Redis is already connecting/connected\n    at /home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:107:24\n    at new Promise (<anonymous>)\n    at EventEmitter.connect (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:103:25)\n    at ensureConnection (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:26:25)\n    at Object.<anonymous> (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:52:1)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","timestamp":"2025-07-19T18:02:22.976Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:02:22.979Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:02:22.981Z"}
+{"level":"error","message":"Failed to connect to Redis: Redis is already connecting/connected","stack":"Error: Redis is already connecting/connected\n    at /home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:107:24\n    at new Promise (<anonymous>)\n    at EventEmitter.connect (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:103:25)\n    at ensureConnection (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:26:25)\n    at Object.<anonymous> (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:52:1)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","timestamp":"2025-07-19T18:02:35.256Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:02:35.258Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:02:35.260Z"}
+{"level":"error","message":"Failed to connect to Redis: Redis is already connecting/connected","stack":"Error: Redis is already connecting/connected\n    at /home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:107:24\n    at new Promise (<anonymous>)\n    at EventEmitter.connect (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/node_modules/ioredis/built/Redis.js:103:25)\n    at ensureConnection (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:26:25)\n    at Object.<anonymous> (/home/shams/E-DRIVE/Learning/full-stack-auth/backend/config/redis.js:52:1)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","timestamp":"2025-07-19T18:03:32.213Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:03:32.215Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:03:32.217Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:05:19.044Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:05:19.046Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:06:03.289Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:06:03.291Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:07:15.222Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:07:15.224Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:16:14.941Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:16:14.945Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:16:36.238Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:16:36.247Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:17:15.672Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:17:15.675Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:17:58.297Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:17:58.305Z"}
+{"level":"info","message":"Redis connection closed gracefully","timestamp":"2025-07-19T18:23:06.313Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:24:57.708Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:24:57.713Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:27:13.840Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:27:13.843Z"}
+{"level":"info","message":"Redis connected","timestamp":"2025-07-19T18:29:22.503Z"}
+{"level":"info","message":"Redis ready","timestamp":"2025-07-19T18:29:22.507Z"}

@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/shams/E-DRIVE/Learning/full-stack-auth/backend/logs/.3bd397f452179a4dc6859c119b920edc3e07091b-audit.json",
+    "files": [
+        {
+            "date": 1752945000417,
+            "name": "/home/shams/E-DRIVE/Learning/full-stack-auth/backend/logs/combined-2025-07-19.log",
+            "hash": "9a400d310019b2e4de1e41bf64b92fd0f9421a6ea57c5a453970dffaf7702426"
+        },
+        {
+            "date": 1752950316218,
+            "name": "/home/shams/E-DRIVE/Learning/full-stack-auth/backend/logs/combined-2025-07-20.log",
+            "hash": "daa3ab4977b3b5774d2cf88b8f437d01cfb58387f310453bc381528e513af896"
+        },
+        {
+            "date": 1753893009069,
+            "name": "/home/shams/E-DRIVE/Learning/full-stack-auth/backend/logs/combined-2025-07-30.log",
+            "hash": "dbee49e69357b1d00dfa9ca1deb4e309d348a0b8f255460e6df615f5971e1af6"
+        }
+    ],
+    "hashType": "sha256"
+}

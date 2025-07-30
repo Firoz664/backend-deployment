@@ -1,0 +1,32 @@
+DEBUG: Starting server.js script
+[dotenv@17.2.0] injecting env (49) from .env (tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' })
+DEBUG: Dotenv loaded
+DEBUG: Loading mongoose...
+DEBUG: Loading logger...
+DEBUG: Loading redis config...
+[dotenv@17.2.0] injecting env (0) from .env (tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' })
+DEBUG: Loading app...
+[dotenv@17.2.0] injecting env (0) from .env (tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild)
+Creating simple app...
+Simple app setup complete
+DEBUG: All modules loaded
+DEBUG: Starting server initialization...
+2025-07-20 12:38:05:385 [32minfo[39m: [32mStarting server initialization...[39m
+DEBUG: Connecting to database...
+2025-07-20 12:38:05:385 [32minfo[39m: [32mConnected to MongoDB: mongodb://localhost:27017/secure-auth-full-stack[39m
+DEBUG: Database connected
+DEBUG: Initializing Redis...
+2025-07-20 12:38:05:385 [32minfo[39m: [32mRedis connecting...[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32mRedis connection ready[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32m✅ Redis connected successfully[39m
+DEBUG: Redis initialized successfully
+2025-07-20 12:38:05:385 [32minfo[39m: [32mRedis initialized successfully[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32m🚀 Server is running on port 9000[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32m📊 Environment: development[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32m💾 Database is connected to MongoDB[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32m🔴 Redis is connected and ready[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32m📍 Health check available at: http://localhost:9000/health[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32m🔗 API base URL: http://localhost:9000/api[39m
+2025-07-20 12:38:05:385 [32minfo[39m: [32mServer listening on port 9000[39m
+2025-07-20 12:39:02:392 [32minfo[39m: [32mReceived SIGTERM. Starting graceful shutdown...[39m
+2025-07-20 12:39:12:3912 [31merror[39m: [31mCould not close connections in time, forcefully shutting down[39m

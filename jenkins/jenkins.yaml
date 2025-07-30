@@ -1,0 +1,265 @@
+# Jenkins Configuration as Code (JCasC)
+jenkins:
+  systemMessage: "Full Stack Auth - Jenkins CI/CD Server"
+  numExecutors: 2
+  mode: NORMAL
+  scmCheckoutRetryCount: 3
+  
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin123"  # Change this in production
+          
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+        - "Job/Build:authenticated"
+        - "Job/Cancel:authenticated"
+        - "Job/Read:authenticated"
+
+  remotingSecurity:
+    enabled: true
+
+  # Global libraries
+  globalLibraries:
+    libraries:
+      - name: "shared-library"
+        defaultVersion: "main"
+        retriever:
+          modernSCM:
+            scm:
+              github:
+                repoOwner: "your-org"
+                repository: "jenkins-shared-library"
+                credentialsId: "github-credentials"
+
+# Security configuration
+security:
+  queueItemAuthenticator:
+    authenticators:
+      - global:
+          strategy: triggeringUsersAuthorizationStrategy
+
+# Credentials configuration
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "docker-registry-creds"
+              username: "your-docker-username"
+              password: "your-docker-password"
+              description: "Docker Registry Credentials"
+          
+          - usernamePassword:
+              scope: GLOBAL
+              id: "github-credentials"
+              username: "your-github-username"
+              password: "your-github-token"
+              description: "GitHub Credentials"
+          
+          - string:
+              scope: GLOBAL
+              id: "slack-token"
+              secret: "your-slack-bot-token"
+              description: "Slack Bot Token"
+          
+          - string:
+              scope: GLOBAL
+              id: "email-password"
+              secret: "your-email-app-password"
+              description: "Email SMTP Password"
+
+# Tool configurations
+tool:
+  git:
+    installations:
+      - name: "Default"
+        home: "/usr/bin/git"
+  
+  nodejs:
+    installations:
+      - name: "NodeJS 18"
+        properties:
+          - installSource:
+              installers:
+                - nodeJSInstaller:
+                    id: "18.18.0"
+                    npmPackagesGloballyInstalled: "npm@latest"
+
+  dockerTool:
+    installations:
+      - name: "Docker"
+        home: "/usr/bin/docker"
+
+# Email configuration
+unclassified:
+  email-ext:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: |
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+      
+      Check console output at $BUILD_URL to view the results.
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    defaultTriggerIds:
+      - "hudson.plugins.emailext.plugins.trigger.FailureTrigger"
+      - "hudson.plugins.emailext.plugins.trigger.SuccessTrigger"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: -1
+    precedenceBulk: false
+    watchingEnabled: false
+    
+  mailer:
+    adminAddress: "admin@yourcompany.com"
+    authentication:
+      username: "your-email@gmail.com"
+      password: "your-app-password"
+    charset: "UTF-8"
+    smtpHost: "smtp.gmail.com"
+    smtpPort: "587"
+    useSsl: false
+    useTls: true
+    
+  slackNotifier:
+    botUser: false
+    sendAsText: false
+    teamDomain: "your-team"
+    token: "your-slack-bot-token"
+    tokenCredentialId: "slack-token"
+
+  # GitHub configuration
+  githubpluginconfig:
+    configs:
+      - name: "GitHub"
+        apiUrl: "https://api.github.com"
+        credentialsId: "github-credentials"
+        manageHooks: true
+
+  # SonarQube configuration (if using)
+  sonarGlobalConfiguration:
+    installations:
+      - name: "SonarQube"
+        serverUrl: "http://sonarqube:9000"
+        credentialsId: "sonar-token"
+
+# Job configurations
+jobs:
+  - script: |
+      multibranchPipelineJob('fullstack-auth-backend') {
+        displayName('Full Stack Auth Backend')
+        description('CI/CD Pipeline for Full Stack Auth Backend')
+        
+        branchSources {
+          github {
+            id('github-source')
+            credentialsId('github-credentials')
+            repoOwner('your-github-username')
+            repository('full-stack-auth')
+            includes('main develop feature/* hotfix/*')
+          }
+        }
+        
+        configure { node ->
+          def traits = node / 'sources' / 'data' / 'jenkins.branch.BranchSource' / 'source' / 'traits'
+          traits << 'org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait' {
+            strategyId(1) // Exclude branches that are also filed as PRs
+          }
+          traits << 'org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait' {
+            strategyId(1) // Merging the pull request with the current target branch revision
+          }
+        }
+        
+        orphanedItemStrategy {
+          discardOldItems {
+            numToKeep(20)
+            daysToKeep(30)
+          }
+        }
+        
+        triggers {
+          periodicFolderTrigger {
+            interval('1d')
+          }
+        }
+      }
+
+  - script: |
+      pipelineJob('deploy-to-staging') {
+        displayName('Deploy to Staging')
+        description('Manual deployment to staging environment')
+        
+        parameters {
+          stringParam('BRANCH', 'develop', 'Branch to deploy')
+          stringParam('IMAGE_TAG', 'latest', 'Docker image tag to deploy')
+        }
+        
+        definition {
+          cps {
+            script('''
+              pipeline {
+                agent any
+                stages {
+                  stage('Deploy to Staging') {
+                    steps {
+                      script {
+                        build job: 'fullstack-auth-backend/develop',
+                              parameters: [
+                                string(name: 'FORCE_DEPLOY', value: 'true')
+                              ]
+                      }
+                    }
+                  }
+                }
+              }
+            ''')
+            sandbox()
+          }
+        }
+      }
+
+  - script: |
+      pipelineJob('deploy-to-production') {
+        displayName('Deploy to Production')
+        description('Manual deployment to production environment')
+        
+        parameters {
+          stringParam('IMAGE_TAG', '', 'Docker image tag to deploy (required)')
+          booleanParam('SKIP_TESTS', false, 'Skip pre-deployment tests')
+        }
+        
+        definition {
+          cps {
+            script('''
+              pipeline {
+                agent any
+                stages {
+                  stage('Production Deployment') {
+                    steps {
+                      script {
+                        if (params.IMAGE_TAG == '') {
+                          error('IMAGE_TAG parameter is required for production deployment')
+                        }
+                        
+                        build job: 'fullstack-auth-backend/main',
+                              parameters: [
+                                string(name: 'FORCE_DEPLOY', value: 'true'),
+                                string(name: 'IMAGE_TAG', value: params.IMAGE_TAG)
+                              ]
+                      }
+                    }
+                  }
+                }
+              }
+            ''')
+            sandbox()
+          }
+        }
+      }

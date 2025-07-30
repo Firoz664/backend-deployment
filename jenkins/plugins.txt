@@ -1,0 +1,51 @@
+# Essential Jenkins plugins for CI/CD pipeline
+ant:latest
+antisamy-markup-formatter:latest
+build-timeout:latest
+cloudbees-folder:latest
+configuration-as-code:latest
+credentials-binding:latest
+email-ext:latest
+git:latest
+github:latest
+github-branch-source:latest
+gradle:latest
+ldap:latest
+mailer:latest
+matrix-auth:latest
+pam-auth:latest
+pipeline-github-lib:latest
+pipeline-stage-view:latest
+slack:latest
+ssh-slaves:latest
+timestamper:latest
+workflow-aggregator:latest
+ws-cleanup:latest
+
+# Docker related plugins
+docker-workflow:latest
+docker-commons:latest
+docker-build-step:latest
+
+# Testing and Quality plugins
+junit:latest
+jacoco:latest
+sonar:latest
+htmlpublisher:latest
+
+# Notification plugins
+email-ext:latest
+slack:latest
+build-monitor-plugin:latest
+
+# Security plugins
+matrix-auth:latest
+role-strategy:latest
+
+# Utility plugins
+build-name-setter:latest
+build-user-vars-plugin:latest
+environment-injector:latest
+jobConfigHistory:latest
+dashboard-view:latest
+blueocean:latest

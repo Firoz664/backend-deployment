@@ -1,0 +1,156 @@
+version: '3.8'
+
+services:
+  # Jenkins CI/CD Server
+  jenkins:
+    image: jenkins/jenkins:lts-jdk11
+    container_name: auth-jenkins
+    restart: unless-stopped
+    user: root
+    environment:
+      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_CERT_PATH=/certs/client
+      - DOCKER_TLS_VERIFY=1
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+      - JENKINS_OPTS=--httpPort=8080
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_data:/var/jenkins_home
+      - jenkins_docker_certs:/certs/client:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./jenkins/plugins.txt:/usr/share/jenkins/ref/plugins.txt
+      - ./jenkins/jenkins.yaml:/var/jenkins_home/casc_configs/jenkins.yaml
+      - ./jenkins/jobs:/var/jenkins_home/jobs
+    networks:
+      - jenkins-network
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/login"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    depends_on:
+      - docker-dind
+
+  # Docker-in-Docker for Jenkins
+  docker-dind:
+    image: docker:dind
+    container_name: jenkins-docker
+    restart: unless-stopped
+    privileged: true
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+    volumes:
+      - jenkins_docker_certs:/certs/client
+      - jenkins_data:/var/jenkins_home
+      - docker_data:/var/lib/docker
+    ports:
+      - "2376:2376"
+    networks:
+      - jenkins-network
+    command: --storage-driver=overlay2
+
+  # Jenkins Agent (for distributed builds)
+  jenkins-agent:
+    image: jenkins/ssh-agent:jdk11
+    container_name: jenkins-agent
+    restart: unless-stopped
+    environment:
+      - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa YOUR_PUBLIC_KEY_HERE
+    ports:
+      - "2222:22"
+    volumes:
+      - agent_data:/home/jenkins
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - jenkins-network
+    depends_on:
+      - jenkins
+
+  # SonarQube for Code Quality (Optional)
+  sonarqube:
+    image: sonarqube:community
+    container_name: auth-sonarqube
+    restart: unless-stopped
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+      - SONAR_JDBC_URL=jdbc:postgresql://sonar-db:5432/sonar
+      - SONAR_JDBC_USERNAME=sonar
+      - SONAR_JDBC_PASSWORD=sonarpass123
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+    networks:
+      - jenkins-network
+    depends_on:
+      - sonar-db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/api/system/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+
+  # PostgreSQL for SonarQube
+  sonar-db:
+    image: postgres:13
+    container_name: sonar-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonarpass123
+      - POSTGRES_DB=sonar
+    volumes:
+      - sonar_db_data:/var/lib/postgresql/data
+    networks:
+      - jenkins-network
+
+  # Nexus Repository Manager (Optional)
+  nexus:
+    image: sonatype/nexus3:latest
+    container_name: auth-nexus
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    volumes:
+      - nexus_data:/nexus-data
+    networks:
+      - jenkins-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/service/rest/v1/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 180s
+
+networks:
+  jenkins-network:
+    driver: bridge
+  app-network:
+    external: true
+
+volumes:
+  jenkins_data:
+    driver: local
+  jenkins_docker_certs:
+    driver: local
+  docker_data:
+    driver: local
+  agent_data:
+    driver: local
+  sonarqube_data:
+    driver: local
+  sonarqube_logs:
+    driver: local
+  sonarqube_extensions:
+    driver: local
+  sonar_db_data:
+    driver: local
+  nexus_data:
+    driver: local
